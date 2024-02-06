@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    appearance: none;
+    border: none;
+    border-radius: 0;
+}
+
+a {
+    appearance: none;
+}
+
+:root {
+    --c: green;
+}
+
+body {
+    font-size: 16px;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 100%;
+    height: 1.5rem;
+}
+
+#options {
+    position: fixed;
+    right: 2%;
+    top: 5%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    width: 9rem;
+    padding: 1rem;
+
+    border: 1px solid black;
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    z-index: 9;
+}
+
+#options.hidden {
+    /* width: 1rem; */
+    padding: 0.75rem;
+}
+
+#options.hidden>*:not(:first-child) {
+    display: none;
+}
+
+#options-header {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem;
+    cursor: move;
+
+    display: grid;
+    grid: 1fr / 5fr 1fr;
+}
+
+#option-hide {
+    position: relative;
+    grid-column: 2;
+    text-align: center;
+    user-select: none;
+    background-color: red;
+
+    width: 1rem;
+    height: 1rem;
+}
+#option-hide::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: currentColor;
+    right: 5%;
+    top: 50%;
+}
+
+
+#grid-table {
+    border-collapse: collapse;
+    overflow: visible;
+    display: block;
+}
+#grid-table tr {
+    background-color: white;
+}
+#grid-table td {
+    border: 1px solid black;
+}

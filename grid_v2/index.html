@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>  
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<link rel="icon" href="grid_icon.png">
+	<link rel='stylesheet' href='style.css'>
+    
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <div id="options">
+        <div id="options-header">
+            <i id="option-hide"></i>
+        </div>
+        <span style="margin-top: 1rem;">
+        <label>Rows
+            <input id="row-input" type="number" step="1" min="0" value="5">
+        </label>
+        <label>Columns
+            <input id="column-input" type="number" step="1" min="0" value="10">
+        </label>
+        <label>Cell Size
+            <input id="size-input" type="number" step="1" min="1" value="32">
+        </label>
+        <label>Area Color
+            <input id="color-input" type="color" value="#304050">
+        </label>
+    </div>
+
+    <table id="grid-table"></table>
+</body>
